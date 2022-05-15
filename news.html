@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="news.css">
+  <script src="https://kit.fontawesome.com/8e71861a84.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="news">
+<i class="fa fa-times" id="close" ></i>
+<h4 id="whoa">Whoa...    😄</h4>
+<p id="description" >Enter your email address below to get notified when I make a new post!</p>
+<input type="text" id="email" placeholder="Your e-mail">
+<i class="fas fa-solid fa-arrow-right" id="arrow-submit"  onclick="postEmail();"></i>
+<input type="button" id="submit" onclick="postEmail();"></input>
+<p id="success" class="email-status">You successfully subscribed. Thank you!</p>
+<p id="error" class="email-status">Uh, there was an unexpected error></p>
+<p id="invalid" class="email-status">Please enter a valid e-mail address</p>
+  
+</div>
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"></script>
+</body>
+</html>

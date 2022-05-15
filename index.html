@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="og:description" content="Hello! This is my portfolio!">
+  <meta name="description" content="Hello! This is my portfolio!">
+  <meta name="author" content="Krix">
+  <meta name="og:image"
+    content="https://media.discordapp.net/attachments/890719375236145206/952156693284925500/20210409_165203-2.jpg">
+  <meta name="theme-color" content="#f88a33">
+  <title>Krix</title>
+  
+  <link rel="stylesheet" media="screen and (min-width: 900px)" href="desktop.css" type="text/css">
+  <link rel="stylesheet" media="screen and (max-width: 900px)" href="mobile.css">
+  
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Sriracha&display=swap&family=Poppins:wght@400;&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="https://media.discordapp.net/attachments/890719375236145206/952156693284925500/20210409_165203-2.jpg"
+    type="image/jpg">
+  <script src="https://kit.fontawesome.com/8e71861a84.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body style="visibility:hidden;">
+<div class="spotify">
+  <img src="Spotify.png" alt="spotify" id="spotify-logo"></img>
+  <div id="artist">Pewdiepie:</div>
+  <div id="songname">Test lasagna</div>
+</div>
+  <iframe src="news.html" id="popup"></iframe>
+  <div class="navbar-h">
+
+    <ul>
+        <li><i class="fas fa-home" style="margin-right: 35px;"></i><a href="index.html" style="margin-left: -30px;">Home</a>
+        </li>
+      <li><i class="fas fa-clipboard-list" style="margin-right: 5px;"></i><a href="projects.html">Projects</a></li>
+       <li><i class="fas fa-tools" style="margin-right: 5px;"></i><a href="/tools/index.html">Tools</a>
+       </li>
+      <li><i class="fas fa-heart" style="margin-right: 5px;"></i><a href="donate.html">Donate</a>
+      </li>
+
+
+
+
+
+      
+    </ul>
+
+   </div>
+
+  </div>
+  <div class="navbar">
+    <div class="logo-container">
+      <img id="logo" src="logo.webp" style="border-radius:50%" alt="Logo"></img>
+      <div id="online"></div>
+      <div id="dnd"></div>
+      <div id="idle"></div>
+      <div id="offline"></div>
+    </div>
+    <div class="socials">
+      <i class="fab fa-brands fa-discord" id="discord"
+        onclick="openURL('https://www.discordapp.com/users/760133992459796510', 'discord');"></i>
+      <i class="fab fa-brands fa-github" id="github" onclick="openURL('https://github.com/Krix12', 'github');"></i>
+      <i class="fab fa-brands fa-paypal" id="paypal"
+        onclick="openURL('https://www.paypal.com/paypalme/krixdesigner', 'paypal');"></i>
+      <i class="fab fa-brands fa-youtube" id="youtube"
+        onclick="openURL('https://youtube.com/channel/UCvD9LLUGUMJX60aOpxYmjlw', 'youtube')"></i>
+      <i class="fab fa-brands fa-spotify" id="spotify"
+        onclick="openURL('https://open.spotify.com/user/31e4ojlensqfoyiutye6nt5445zi?si=sYRJOqdvT26OwU9QzyupUg&utm_source=copy-link', 'spotify')"></i>
+    </div>
+    <div
+      style="display:flex;justify-content:center;align-items:center;position:absolute;right:0;top:0;height:50px;width:30px;">
+      <i class="fas fa-bars" id="menu" onclick="openMenu();"></i>
+    </div>
+  </div>
+  <div id="menu-container">
+    <div class="menu-content">
+      <i class="fas fa-home" id="home" ></i>
+      <a href="#" style="text-decoration: none;color:white;">HOME</a>
+    </div>
+    <div class="menu-content">
+      <i class="fas fa-clipboard-list" id="projects"></i>
+      <a href="/projects/index.html" style="text-decoration: none;color:white;" >PROJECTS</a>
+    </div>
+    <div class="menu-content">
+      <i class="fas fa-tools" id="tools"></i>
+      <a href="/tools/index.html" style="text-decoration: none;color:white;">TOOLS</a>
+    </div>
+    <div class="menu-content">
+      <i class="fas fa-heart" id="donate"></i>
+      <a href="donate.html" style="text-decoration: none;color:white;">DONATE</a>
+    </div>
+    <div style="display:flex;eight:10px;width:100%;align-items:center;justify-content:center;">
+      <i  style="font-family:`wotfard`;color:#a8a8a8;font-size:8px;margin-left:auto;margin-right:auto;z-index:20;text-align:center;display:none;">Contact
+        me if you have any ideas on how to make this menu look better, please</i>
+    </div>
+
+  </div>
+
+  <div class="hometext">
+    <div class="title">
+      I'm <p>Krix</p>!
+    </div>
+    <div class="subtitle">
+      A <div class="age">13</div> years old developer
+    </div>
+  </div>
+  <div id="button-container">
+    <button class="more2" href="#" onclick="display();" aria-label="More about me"></button>
+    <button id="more" href="#" onclick="display();">MORE ABOUT ME</button>
+    <p id="moretext" onclick="display();">MORE ABOUT ME</p>
+  </div>
+  <div style="display:inline-block;width:100vw;height:50px;text-align:center;">
+    <i id="arrow" class="fas fa-solid fa-arrow-down"></i>
+    <i id="arrow2" class="fas fa-solid fa-arrow-down" onclick="hide();"></i>
+  </div>
+
+  <div id="json">
+    <div style="margin:4px;">
+      <div class="dots" style="background-color: #ff5f56;"></div>
+      <div class="dots" style="background-color: #ffbd2e;"></div>
+      <div class="dots" style="background-color: #27c93f;"></div>
+      <i class="fab fa-brands fa-js-square" style="color:yellow;font-size:12px;margin-left:5px;"></i>
+      <p style="display:inline;color:white;font-size:12px;">Krix.js</p>
+    </div>
+    <div id="line"></div>
+    <!--JSON-->
+    <div style="margin: 6px 0 0 5px;" <br>
+      <p class="const" style="color:#61a7f0;">const </p>
+      <p class="const">Krix </p>
+      <p class="basic">= {</p><br>
+    </div>
+    <div style="margin-left:20px;">
+      <p class="key">name</p>
+      <p <p class="basic">:</p>
+      <p class="string"> "Kristjan"</p>
+      <p class="basic">,</p><br>
+      <p class="key">surname</p>
+      <p <p class="basic">:</p>
+      <p class="string"> "Kocevar"</p>
+      <p class="basic">,</p><br>
+      <p class="key">gender</p>
+      <p <p class="basic">:</p>
+      <p class="string">"male"</p>
+      <p class="basic">,</p><br>
+      <p class="key">age</p>
+      <p <p class="basic">:</p>
+      <p class="string" style="color:#d18643;"> 13</p>
+      <p class="basic">,</p><br>
+      <p class="key">country</p>
+      <p class="basic">:</p>
+      <p class="string"> "Slovenia"</p>
+      <p class="basic">,</p><br>
+      <p class="key">likes</p>
+      <p <p class="basic">:</p>
+      <p class="basic" style="color:#8c8c8c;font-size:16px"> [ </p>
+      <p class="string">"coding"</p>
+      <p class="basic">,</p>
+      <p class="string">"reading"</p>
+      <p class="basic">,</p>
+      <p class="string">"anime"</p>
+      <p class="basic">,</p>
+      <p class="string">"games"</p>
+      <p class="basic">,</p>
+      <p class="string">"YouTube"</p>
+      <p class="basic" style="color:#8c8c8c;font-size:16px"> ]</p>
+      <p class="basic">,</p><br>
+      <p class="key">favourites</p>
+      <p <p class="basic">:</p>
+      <p class="basic" style="color:#bfbfbf;font-size:16px"> {</p><br>
+      <div style="margin-left:10px;">
+        <p class="key2">youtuber</p>
+        <p <p class="basic">:</p>
+        <p class="string"> "Wortex"</p>
+        <p class="basic">,</p><br>
+        <p class="key2">anime</p>
+        <p <p class="basic">:</p>
+        <p class="string"> "Attack on Titan"</p>
+        <p class="basic">,</p><br>
+        <p class="key2">book</p>
+        <p <p class="basic">:</p>
+        <p class="string"> "John Green: The Fault in Our Stars"</p>
+        <p class="basic">,</p><br>
+        <p class="key2">song</p>
+        <p <p class="basic">:</p>
+        <p class="string" style="color:#545453">undefined</p><br>
+      </div>
+      <p class="basic" style="color:#bfbfbf;font-size:16px;margin-left:10px;">}</p><br>
+      <p class="basic">}</p>
+    </div>
+  </div>
+  </div>
+  <div class="posts">
+    <div style="display: flex;">
+      <div id="posts-num">
+        <p>1</p> POST
+      </div>
+      <i class="far fa-regular fa-envelope" id="subscribe" onclick="showpopup()"></i>
+    </div>
+    <div class="post" onclick="window.open(`/posts/my-first-post.html`, `_self`)">
+      <p class="date">March 28 2022 · 2 min read</p>
+      <h6>⛰️ My first post</h6>
+      <p>Basic information on my future posts</p>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/slide-element@2.2.6/dist/index.umd.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" defer></script>
+  <noscript>
+    <style>
+      body { visibility: visible; }
+    </style>
+  </noscript>
+</body>
+
+</html>

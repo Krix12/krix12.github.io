@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;@400;@700&display=swap&family=Space+Mono:wght@700&display=swap&family=Sriracha&display=swap');
+
+body {
+  background: transparent;
+}
+
+.news {
+  height: 220px;
+  width: 320px;
+  background-color: #001b33;
+  border: 5px solid #002240;
+  border-radius: 9px;
+  
+}
+
+#whoa {
+  position: absolute;
+  top: -4px;
+  left: 24px;
+  color: white;
+  font-family: "Sriracha";
+  font-size: 18px;
+}
+
+#description {
+  margin-top: 38px;
+  margin-left: 12px;
+  color: #9faab8;
+  font-family: "Sriracha";
+}
+
+#email {
+  height: 40px;
+  width: 70%;
+  color: white;
+  background-color: #424b5a;
+  border: 0;
+  border-radius: 5px;
+  margin-left: 12px;
+}
+
+#email:focus {
+  outline: 0;
+}
+
+
+
+#email::placeholder {
+  color: #747f8c;
+  margin-left: 3px;
+}
+
+#submit {
+  position: absolute;
+  height: 40px;
+  width: 15%;
+  border: 0;
+  border-radius: 5px;
+  background-color: #fd426d;
+  top: 105px;
+  margin-left: 4px;
+}
+
+#arrow-submit {
+  position: absolute;
+  top: 115px;
+  color: white;
+  font-size: 19px;
+  margin-left: 20px;
+  z-index: 20;
+}
+
+#close {
+  position: absolute;
+  left: 315px;
+  color: #a1a1a1;
+  font-size: 19px;
+  font-weight: 900;
+  z-index: 21;
+}
+
+.email-status {
+display: none;
+font-family: "Sriracha";
+font-size: 11px;
+margin-left: 15px;
+}
+
+#success {
+  color: #3ba55b;
+}
+
+#error, #invalid {
+  color: #ea4246;
+}
