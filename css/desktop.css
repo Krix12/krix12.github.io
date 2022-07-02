@@ -10,6 +10,8 @@
 
 
 body {
+  /*#111319*/
+  /*#141622*/
   background-color: #141622;
   margin: 0;
   padding: 0;
@@ -401,15 +403,120 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fd426d", en
 
 
 .curve {
-  border: 2px solid red;
   margin-top: 200px;
   z-index: 100;
 }
-.posts {
+
+.curve2 {
+  transform: rotate(180deg);
+}
+.about-cont {
   position: absolute;
-  top: 670px;
-  height: 190px;
-  width: 100vw;
+  top: 770px;
+  height: 200px;
+  width: 100%;
+  background-color: #1a1d26;
+}
+
+.or-title {
+  font-family: "poppins";
+  font-size: calc(1.275rem + 0.3vw);
+  letter-spacing: 2px;
+  color: #ff7547;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 10px 0 10px 50px;
+}
+.wh-content {
+  font-family: "poppins", sans-serif;
+  font-size: 18px;
+  margin: 0 0 0 50px; 
+  color: white;
+}
+
+.about {
+  color: white;
+  width: 70%;
+}
+
+.projects {
+  margin: 500px 0 100px 0;
+}
+
+.projects-filter {
+  display: block;
+  width: max-content;
+  margin: 10px auto 0 auto;
+  color: white;
+  
+}
+
+.filter-btn {
+  height: 30px;
+  width: 100px;
+  background-color: #ff7547;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: "poppins", sans-serif; 
+  margin-left: 10px;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em white;
+    box-shadow: inset 0 0 0.5em 0 #ff7547, 0 0 0.5em 0 #ff7547;
+    position: relative;
+    cursor: pointer;
+}
+
+.filter-btn::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  background: #ff7547;
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(1em);
+  opacity: 0.7;
+}
+
+.filter-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em #ff7547;
+  opacity: 0;
+  background-color: #ff7547;
+  z-index: -1;
+  transition: opacity 100ms linear;
+  border: 2px solid #ff7547;
+  border-radius: 5px;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  border-radius: 5px;
+  color: white;
+  text-shadow: none;
+  background-color: #B1553B;
+  border: 2px solid #ff7547;
+}
+
+.filter-btn:hover::before,
+.filter-btn:focus::before {
+  opacity: 1;
+  top: 130%;
+}
+.filter-btn:hover::after,
+.filter-btn:focus::after {
+  opacity: 1;
+}
+.posts {
+  display: none;
 }
 
 #subscribe {
