@@ -7,11 +7,7 @@
  src: url("Wotfard-Regular.woff2");
  font-display: swap;
 }
-/*
-$spotOne: #060411;
-$spotTwo: #ec008c;
-$spotThree: #ff0000;
-*/
+
 
 body {
   background-color: #141622;
@@ -138,16 +134,29 @@ background-clip: text;
     text-decoration: none;
   }
 }
+.spotify {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  line-height: 20px;
+  width: 100%;
+}
 
+#spotify-logo {
+ height: 25px;
+ width: 25px;
+
+ margin-left: 7px;
+}
 
 .hometext {
-  display: block;
   position: relative;
   height: 100px;
   width: 410px;
-  margin-top: 60px;
-  margin-left: auto;
-  margin-right: auto;
+  
+
 }
 
 .title {
@@ -157,6 +166,7 @@ background-clip: text;
   text-align: center;
   font-family: "Roboto";
   font-weight: 700;
+  margin: 50px 0 0 -50px;
 }
 
 .title p {
@@ -207,6 +217,10 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FD426D", en
   transform: rotate(-180deg);
   z-index: 10;
 }
+
+#arrow2:hover {
+  cursor: pointer;
+}
 .age {
   display: inline-block;
   background: linear-gradient(90deg, hsla(346, 98%, 63%, 1) 0%, hsla(26, 93%, 59%, 1) 100%);
@@ -220,7 +234,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FD426D", en
 #json {
   display: none;
   position: relative;
-  height: 400px;
+  height: 350px;
   width: 300px;
   margin-left: auto;
   margin-right: auto;
@@ -232,7 +246,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FD426D", en
 #json::before {
   content: "";
   position: absolute;
-  height: 400px;
+  height: 350px;
   width: 300px;
   border-radius: 5px;
   background: hsla(346, 98%, 63%, 1);
@@ -248,18 +262,30 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fd426d", en
   z-index: -1;
 }
 
+#arrow-container {
+  display: inline-block;
+  width: max-content;
+  height: 50px;
+  text-align: center;
+  margin-left: 110px;
+}
 #button-container {
   display: grid;
   grid-template: 1fr / 1fr;
   place-items: center;
   position: relative;
   height: 30px;
-  width: 100vw;
+  width: max-content;
+  margin: 0 0 0 40px;
 }
 .more2, #more, #moretext{
   grid-column: 1 / 1;
   grid-row: 1 / 1;
   }
+#more:hover, .more2:hover {
+  cursor: pointer;
+}
+
 #more {
   height: 30px;
   width: 150px;
@@ -344,6 +370,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fd426d", en
   display: inline;
   color: white; 
   font-family: monospace;
+  margin-left: -3px;
 }
 
 .const{
@@ -373,6 +400,11 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fd426d", en
 }
 
 
+.curve {
+  border: 2px solid red;
+  margin-top: 200px;
+  z-index: 100;
+}
 .posts {
   position: absolute;
   top: 670px;
@@ -385,6 +417,10 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fd426d", en
   color: #9fa9b7;
   margin-left: 5px;
   margin-top: -1.7px;
+}
+
+#subscribe:hover {
+  cursor: pointer;
 }
 
 #popup {
@@ -414,6 +450,9 @@ z-index: 20;
   margin-bottom: 9px;
 }
 
+.post:hover {
+  cursor: pointer;
+}
 .date {
   color: #727d92;
   font-family: "wotfard";

@@ -70,6 +70,10 @@ body {
   z-index: 20;
 }
 
+#arrow-submit:hover {
+  cursor: pointer;
+}
+
 #close {
   position: absolute;
   left: 315px;
@@ -79,6 +83,9 @@ body {
   z-index: 21;
 }
 
+#close:hover {
+  cursor: pointer;
+}
 .email-status {
 display: none;
 font-family: "Sriracha";

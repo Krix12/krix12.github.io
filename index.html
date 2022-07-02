@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -12,11 +13,13 @@
   <meta name="theme-color" content="#f88a33">
   <title>Krix</title>
   
-  <link rel="stylesheet" media="screen and (min-width: 900px)" href="desktop.css" type="text/css">
-  <link rel="stylesheet" media="screen and (max-width: 900px)" href="mobile.css">
+  <link rel="stylesheet" media="screen and (min-width: 900px)" href="css/desktop.css" type="text/css">
+  <link rel="stylesheet" media="screen and (max-width: 900px)" href="css/mobile.css">
   
+  
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Sriracha&display=swap&family=Poppins:wght@400;&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Sriracha&display=swap&family=Poppins:wght@400&display=swap" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="https://media.discordapp.net/attachments/890719375236145206/952156693284925500/20210409_165203-2.jpg"
     type="image/jpg">
   <script src="https://kit.fontawesome.com/8e71861a84.js" crossorigin="anonymous"></script>
@@ -29,16 +32,16 @@
   <div id="artist">Pewdiepie:</div>
   <div id="songname">Test lasagna</div>
 </div>
-  <iframe src="news.html" id="popup"></iframe>
+  <iframe src="/content/news.html" id="popup"></iframe>
   <div class="navbar-h">
 
     <ul>
-        <li><i class="fas fa-home" style="margin-right: 35px;"></i><a href="index.html" style="margin-left: -30px;">Home</a>
+        <li><a href="index.html" style="margin-left: -30px;" onmouseover="emoji(this);">🏡 Home</a>
         </li>
-      <li><i class="fas fa-clipboard-list" style="margin-right: 5px;"></i><a href="projects.html">Projects</a></li>
-       <li><i class="fas fa-tools" style="margin-right: 5px;"></i><a href="/tools/index.html">Tools</a>
+      <li><a href="content/projects/index.html" onmouseover="emoji(this);">📄 Projects</a></li>
+       <li><a href="content/tools/index.html" onmouseover="emoji(this);">👨‍🔧 Tools</a>
        </li>
-      <li><i class="fas fa-heart" style="margin-right: 5px;"></i><a href="donate.html">Donate</a>
+      <li><a href="content/donate.html" onmouseover="emoji(this);">😇 Donate</a>
       </li>
 
 
@@ -53,7 +56,7 @@
   </div>
   <div class="navbar">
     <div class="logo-container">
-      <img id="logo" src="logo.webp" style="border-radius:50%" alt="Logo"></img>
+      <img id="logo" src="Assets/Images/logo.webp" style="border-radius:50%" alt="Logo"></img>
       <div id="online"></div>
       <div id="dnd"></div>
       <div id="idle"></div>
@@ -92,7 +95,7 @@
       <i class="fas fa-heart" id="donate"></i>
       <a href="donate.html" style="text-decoration: none;color:white;">DONATE</a>
     </div>
-    <div style="display:flex;eight:10px;width:100%;align-items:center;justify-content:center;">
+    <div style="display:flex;height:10px;width:100%;align-items:center;justify-content:center;">
       <i  style="font-family:`wotfard`;color:#a8a8a8;font-size:8px;margin-left:auto;margin-right:auto;z-index:20;text-align:center;display:none;">Contact
         me if you have any ideas on how to make this menu look better, please</i>
     </div>
@@ -112,7 +115,7 @@
     <button id="more" href="#" onclick="display();">MORE ABOUT ME</button>
     <p id="moretext" onclick="display();">MORE ABOUT ME</p>
   </div>
-  <div style="display:inline-block;width:100vw;height:50px;text-align:center;">
+  <div id="arrow-container">
     <i id="arrow" class="fas fa-solid fa-arrow-down"></i>
     <i id="arrow2" class="fas fa-solid fa-arrow-down" onclick="hide();"></i>
   </div>
@@ -127,26 +130,26 @@
     </div>
     <div id="line"></div>
     <!--JSON-->
-    <div style="margin: 6px 0 0 5px;" <br>
+    <div style="margin: 6px 0 0 5px;">
       <p class="const" style="color:#61a7f0;">const </p>
       <p class="const">Krix </p>
       <p class="basic">= {</p><br>
     </div>
     <div style="margin-left:20px;">
       <p class="key">name</p>
-      <p <p class="basic">:</p>
+      <p class="basic">:</p>
       <p class="string"> "Kristjan"</p>
       <p class="basic">,</p><br>
       <p class="key">surname</p>
-      <p <p class="basic">:</p>
+      <p class="basic">:</p>
       <p class="string"> "Kocevar"</p>
       <p class="basic">,</p><br>
       <p class="key">gender</p>
-      <p <p class="basic">:</p>
+      <p class="basic">:</p>
       <p class="string">"male"</p>
       <p class="basic">,</p><br>
       <p class="key">age</p>
-      <p <p class="basic">:</p>
+      <p class="basic">:</p>
       <p class="string" style="color:#d18643;"> 13</p>
       <p class="basic">,</p><br>
       <p class="key">country</p>
@@ -154,7 +157,7 @@
       <p class="string"> "Slovenia"</p>
       <p class="basic">,</p><br>
       <p class="key">likes</p>
-      <p <p class="basic">:</p>
+      <p class="basic">:</p>
       <p class="basic" style="color:#8c8c8c;font-size:16px"> [ </p>
       <p class="string">"coding"</p>
       <p class="basic">,</p>
@@ -168,29 +171,32 @@
       <p class="basic" style="color:#8c8c8c;font-size:16px"> ]</p>
       <p class="basic">,</p><br>
       <p class="key">favourites</p>
-      <p <p class="basic">:</p>
+      <p class="basic">:</p>
       <p class="basic" style="color:#bfbfbf;font-size:16px"> {</p><br>
       <div style="margin-left:10px;">
         <p class="key2">youtuber</p>
-        <p <p class="basic">:</p>
+        <p class="basic">:</p>
         <p class="string"> "Wortex"</p>
         <p class="basic">,</p><br>
         <p class="key2">anime</p>
-        <p <p class="basic">:</p>
+        <p class="basic">:</p>
         <p class="string"> "Attack on Titan"</p>
         <p class="basic">,</p><br>
         <p class="key2">book</p>
-        <p <p class="basic">:</p>
+        <p class="basic">:</p>
         <p class="string"> "John Green: The Fault in Our Stars"</p>
         <p class="basic">,</p><br>
         <p class="key2">song</p>
-        <p <p class="basic">:</p>
+        <p class="basic">:</p>
         <p class="string" style="color:#545453">undefined</p><br>
       </div>
       <p class="basic" style="color:#bfbfbf;font-size:16px;margin-left:10px;">}</p><br>
       <p class="basic">}</p>
     </div>
   </div>
+  </div>
+  <div class="curve">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#24252f" fill-opacity="1" d="M0,192L34.3,186.7C68.6,181,137,171,206,144C274.3,117,343,75,411,96C480,117,549,203,617,213.3C685.7,224,754,160,823,165.3C891.4,171,960,245,1029,245.3C1097.1,245,1166,171,1234,138.7C1302.9,107,1371,117,1406,122.7L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
   </div>
   <div class="posts">
     <div style="display: flex;">
@@ -206,7 +212,7 @@
     </div>
 
   </div>
-  <script src="script.js"></script>
+  <script src="javascript/script.js"></script>
   <script src="https://unpkg.com/slide-element@2.2.6/dist/index.umd.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" defer></script>
   <noscript>

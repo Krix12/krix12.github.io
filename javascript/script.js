@@ -1,4 +1,14 @@
 
+console.log("lol")
+function start() {
+  console.log("a")
+  if(screen.width >= 900) {
+    window.open("desktop.html", "_self")
+  } else {
+    window.open("mobile.html", "_self")
+  }
+}
+
 
 async function getStatus() {
 await fetch('https://corsanywhere.herokuapp.com/https://krixportfoliodiscordstatus.herokuapp.com/', {
@@ -15,6 +25,14 @@ await fetch('https://corsanywhere.herokuapp.com/https://krixportfoliodiscordstat
   
 }
 
+function emoji(item) {
+  const content = item.innerHTML.split(" ")
+ item.innerHTML = "✅ " + content[1];
+ item.addEventListener("mouseout", function() {
+  item.innerHTML = content.join(" ");
+ })
+ return
+}
 function openURL(url, id) {
 window.open(url, "_blank").focus();
 document.getElementById(id).style.color = "red";

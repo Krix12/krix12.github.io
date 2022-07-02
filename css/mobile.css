@@ -4,7 +4,7 @@
 
 @font-face {
  font-family: "wotfard";
- src: url("Wotfard-Regular.ttf");
+ src: url("Wotfard-Regular.woff2");
  font-display: swap;
 }
 /*
@@ -254,6 +254,12 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fd426d", en
   z-index: -1;
 }
 
+#arrow-container {
+  display: inline-block;
+  width: 100vw;
+  height: 50px;
+  text-align: center;
+}
 #button-container {
   display: grid;
   grid-template: 1fr / 1fr;
@@ -378,7 +384,9 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fd426d", en
   display: inline;
 }
 
-
+.curve {
+  display: none;
+}
 .posts {
   position: absolute;
   top: 670px;
