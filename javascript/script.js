@@ -1,5 +1,11 @@
 
-console.log("lol")
+let progress = document.getElementById("scrollbar");
+let totalHeight = document.body.scrollHeight - window.innerHeight;
+window.onscroll = function() {
+  let progressHeight = (window.pageYOffset / totalHeight) * 100;
+  progress.style.height = progressHeight + "%";
+}
+console.log("Hello, how do you like my website?")
 function start() {
   console.log("a")
   if(screen.width >= 900) {
@@ -49,11 +55,9 @@ SlideElement.toggle(document.getElementById('menu-container'))
 }
 
 async function display() {
-  getSpotify()
-SlideElement.down(document.getElementById('json'));
-document.getElementById("arrow").style.display = "none";
-document.getElementById("button-container").style.display = "none"; document.getElementById("arrow2")
-arrow2.style.display = "inherit";
+  document.querySelector(".about").scrollIntoView({
+    behavior: "smooth"
+  });
 }
 
 function hide() {

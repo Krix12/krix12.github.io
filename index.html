@@ -19,7 +19,7 @@
   <link href="http://fonts.cdnfonts.com/css/panton" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Sriracha&display=swap&family=Poppins:wght@400&display=swap" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Sriracha&display=swap&family=Poppins:wght@200;300;400&display=swap" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="https://media.discordapp.net/attachments/890719375236145206/952156693284925500/20210409_165203-2.jpg"
     type="image/jpg">
   <script src="https://kit.fontawesome.com/8e71861a84.js" crossorigin="anonymous"></script>
@@ -27,6 +27,17 @@
 </head>
 
 <body style="visibility:hidden;">
+  <div class="gradient"></div>
+  <div id="scrollpath>"></div>
+  <div id="scrollbar"></div>
+  <!--<div class="scrollbar">
+    <ul>
+      <li style="margin:0;"><div class="prelist" style="margin-top:5px;"></div>HOME</li>
+      <li class="inactive"><div class="prelist-inactive"></div>ABOUT</li>
+      <li class="inactive"><div class="prelist-inactive"></div>PROJECTS</li>
+    </ul>
+  </div>-->
+  <div class="indicator"><h1>/HOME</h1></div>
 <div class="spotify">
   <img src="Spotify.png" alt="spotify" id="spotify-logo"></img>
   <div id="artist">Pewdiepie:</div>
@@ -103,11 +114,14 @@
   </div>
 
   <div class="hometext">
+    <div class="pretitle">
+      HELLO!
+    </div>
     <div class="title">
       I'm <p>Krix</p>!
     </div>
     <div class="subtitle">
-      A <div class="age">13</div> years old developer
+      Node.js and website developer
     </div>
   </div>
   <div id="button-container">
@@ -194,20 +208,61 @@
       <p class="basic">}</p>
     </div>
   </div>
+  
+  </div>
+  <div class="about">
+    <div class="indicator" id="indicator-about"><h1>/ABOUT</h1></div>
+  <div class="curve-wrapper">
+  <div class="precurve">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#1a1d26" fill-opacity="1" d="M0,192L34.3,186.7C68.6,181,137,171,206,144C274.3,117,343,75,411,96C480,117,549,203,617,213.3C685.7,224,754,160,823,165.3C891.4,171,960,245,1029,245.3C1097.1,245,1166,171,1234,138.7C1302.9,107,1371,117,1406,122.7L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
+   <defs>
+    <linearGradient id="SvgGradient">
+    <stop offset="0%" stop-color="hsla(346, 98%, 63%, 1)"></stop>
+    <stop offset="100%" stop-color="hsla(26, 93%, 59%, 1)"></stop>
+    </linearGradient>
+   </defs>
+    </svg>
   </div>
   <div class="curve">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1a1d26" fill-opacity="1" d="M0,192L34.3,186.7C68.6,181,137,171,206,144C274.3,117,343,75,411,96C480,117,549,203,617,213.3C685.7,224,754,160,823,165.3C891.4,171,960,245,1029,245.3C1097.1,245,1166,171,1234,138.7C1302.9,107,1371,117,1406,122.7L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#181A21" fill-opacity="1" d="M0,192L34.3,186.7C68.6,181,137,171,206,144C274.3,117,343,75,411,96C480,117,549,203,617,213.3C685.7,224,754,160,823,165.3C891.4,171,960,245,1029,245.3C1097.1,245,1166,171,1234,138.7C1302.9,107,1371,117,1406,122.7L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
+   <defs>
+    <linearGradient id="SvgGradient">
+    <stop offset="0%" stop-color="hsla(346, 98%, 63%, 1)"></stop>
+    <stop offset="100%" stop-color="hsla(26, 93%, 59%, 1)"></stop>
+    </linearGradient>
+   </defs>
+    </svg>
   </div>
+</div>
   <div class="about-cont">
-    <div class="about">
-        <h4 class="or-title">ABOUT ME</h4>
-        <p class="wh-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="aboutContent">
+        <div class="or-title">ABOUT ME<div class="line"></div></div>
+        <div class="wh-subtitle"><h4>GET TO KNOW ME</h4></div>
+        <div class="wh-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
     </div>
-   
+    <div class="prequote"></div>
+    <div class="quote"><i>Being myself is what got me to where I am.</i></div>
+    <div class="quote-author"><i>- Jeff Hardy</i></div>
+    <div class="curve-wrapper" id="curve-wrapper2">
     <div class="curve2">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1a1d26" fill-opacity="1" d="M0,192L34.3,186.7C68.6,181,137,171,206,144C274.3,117,343,75,411,96C480,117,549,203,617,213.3C685.7,224,754,160,823,165.3C891.4,171,960,245,1029,245.3C1097.1,245,1166,171,1234,138.7C1302.9,107,1371,117,1406,122.7L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#181A21" fill-opacity="1" d="M0,192L34.3,186.7C68.6,181,137,171,206,144C274.3,117,343,75,411,96C480,117,549,203,617,213.3C685.7,224,754,160,823,165.3C891.4,171,960,245,1029,245.3C1097.1,245,1166,171,1234,138.7C1302.9,107,1371,117,1406,122.7L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
+      </div>
+      <div class="aftercurve">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="#1a1d26" fill-opacity="1" d="M0,192L34.3,186.7C68.6,181,137,171,206,144C274.3,117,343,75,411,96C480,117,549,203,617,213.3C685.7,224,754,160,823,165.3C891.4,171,960,245,1029,245.3C1097.1,245,1166,171,1234,138.7C1302.9,107,1371,117,1406,122.7L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
+       <defs>
+        <linearGradient id="SvgGradient">
+        <stop offset="0%" stop-color="hsla(346, 98%, 63%, 1)"></stop>
+        <stop offset="100%" stop-color="hsla(26, 93%, 59%, 1)"></stop>
+        </linearGradient>
+       </defs>
+        </svg>
+      </div>
       </div>
     </div>
+  </div>
     <div class="projects">
         <h4 class="or-title">Projects</h4>
        <div class="projects-filter">

@@ -2,24 +2,163 @@
   max-width: 100%;
 }
 
+
 @font-face {
- font-family: "wotfard";
- src: url("Wotfard-Regular.woff2");
- font-display: swap;
+  font-family: "wotfard";
+  src: url("Wotfard-Regular.woff2");
+  font-display: swap;
+ }
+
+ @font-face {
+  font-family: "avalon";
+  src: url("AvalonSquareRegular-ZZVapq.ttf");
+  font-display: swap;
+ }
+
+ @font-face {
+  font-family: 'CatherinedeBeaumont';
+  src:url('../Assets/Fonts/CatherinedeBeaumont/CatherinedeBeaumont.ttf.woff') format('woff'),
+      url('../Assets/Fonts/CatherinedeBeaumont/CatherinedeBeaumont.ttf.svg#CatherinedeBeaumont') format('svg'),
+      url('../Assets/Fonts/CatherinedeBeaumont/CatherinedeBeaumont.ttf.eot'),
+      url('../Assets/Fonts/CatherinedeBeaumont/CatherinedeBeaumont.ttf.eot?#iefix') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
 }
-
-
 body {
   /*#111319*/
   /*#141622*/
-  background-color: #141622;
+  background-color: #111319;
   margin: 0;
   padding: 0;
   visibility: visible !important;
 }
+::-webkit-scrollbar {
+  width: 0;
+}
+#scrollpath {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 10px;
+  background: rgba(255, 255, 255, 0.05);
+}
 
+#scrollbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 0;
+  width: 10px;
+  background: linear-gradient(to top, hsla(346, 98%, 63%, 1), hsla(26, 93%, 59%, 1));
+  z-index: 100;
+  animation: scrollbar 2s ease infinite;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
 
+#scrollbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top, hsla(346, 98%, 63%, 1), hsla(26, 93%, 59%, 1));
+  filter: blur(10px);
+}
+
+#scrollbar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top, hsla(346, 98%, 63%, 1), hsla(26, 93%, 59%, 1));
+  filter: blur(30px);
+}
+.gradient {
+  position: absolute;
+  top: -600px;
+  left: -500px;
+  background: linear-gradient(to right, rgb(255,117,71, 1), rgb(255,117,71, 0));
+  height: 1000px;
+  width: 800px;
+  transform: rotate(45deg);
+}
+
+.scrollbar {
+  color: white;
+  font-family: "poppins", sans-serif;
+  font-weight: 700;
+  position: absolute;
+  right: 50px;
+  top: 250px;
+}
+
+.scrollbar ul {
+  list-style-type: none;
+}
+
+.scrollbar li {
+  margin-top: 30px;
+}
+
+.inactive {
+  color: gray;
+}
+
+@media only screen and (max-width: 1200px) {
+
+  #indicator-about {
+    margin: 100px 0 0 30%;
+  }
+  .aboutContent {
+    color: white;
+    width: 10%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+
+  #indicator-about {
+    margin: 100px 0 0 50%;
+  }
+}
+
+.indicator {
+  color: transparent;
+  font-family: "avalon", sans-serif;
+  font-size: 20px;
+  font-weight: 700px;
+  position: absolute;
+  top: 500px;
+  left: 50px;
+  z-index: 10;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(147, 146, 146);
+}
+
+.prelist {
+  display: inline-block;
+  background-color: white;
+  height: 3px;
+  width: 80px;
+  margin: 10px 20px 5px 0;
+  border-radius: 50px;
+}
+
+.prelist-inactive {
+  display: inline-block;
+  background-color: transparent;
+  height: 3px;
+  width: 80px;
+  margin: 10px 20px 5px 0;
+  border-radius: 50px;
+}
 .navbar-h {
+  display: none;
   width: 100%;
   position: absolute;
   top: 0;
@@ -58,6 +197,7 @@ body {
 #logo {
   position: absolute;
   top: 5px;
+  right: 10px;
   height: 40px;
   width: 40px;
 }
@@ -156,19 +296,24 @@ background-clip: text;
 .hometext {
   position: relative;
   height: 100px;
-  width: 410px;
-  
-
+  width: 400px;
+  padding-left: 0;
+  margin: 100px 0 0 35px;
 }
 
+.pretitle {
+  color: white;
+  font-family: 12px;
+  font-family: "poppins", sans-serif;
+  margin-left: 3px;
+}
 .title {
   color: white;
   font-size: 65px;
-  line-height: 100px;
-  text-align: center;
+  line-height: 1em;
   font-family: "Roboto";
   font-weight: 700;
-  margin: 50px 0 0 -50px;
+  margin-top: 10px;
 }
 
 .title p {
@@ -187,17 +332,15 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FD426D", en
 }
 
 .subtitle {
-  display: none;
   height: 60px;
   position: relative;
   color: white;
   font-size: 22px;
-  font-family: "Roboto";
-  font-weight: 400;
+  font-family: "poppins", sans-serif;
+  font-weight: 200;
   line-height: 50px;
-  text-align: center;
-  border: 2px solid #747f8c;
-  border-radius: 30px;
+  margin-top: -10px;
+  margin-left: 3px;
   }
 
 #arrow {
@@ -234,20 +377,22 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FD426D", en
 }
 
 #json {
-  display: none;
-  position: relative;
+  position: absolute;
+  top: 900px;
+  right: 100px;
   height: 350px;
   width: 300px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
   background-color: #002240;
   border-radius: 5px;
+  z-index: 300;
+  margin-left: 10px;
 }
 
+/*
 #json::before {
   content: "";
   position: absolute;
+  display: block;
   height: 350px;
   width: 300px;
   border-radius: 5px;
@@ -261,9 +406,10 @@ background: -webkit-linear-gradient(360deg, hsla(346, 98%, 63%, 1) 0%, hsla(26, 
 
 filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fd426d", endColorstr="#f88a33", GradientType=1 );
   filter: blur(20px);
+  
   z-index: -1;
 }
-
+*/
 #arrow-container {
   display: inline-block;
   width: max-content;
@@ -278,7 +424,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fd426d", en
   position: relative;
   height: 30px;
   width: max-content;
-  margin: 0 0 0 40px;
+  margin: 30px 0 0 40px;
 }
 .more2, #more, #moretext{
   grid-column: 1 / 1;
@@ -401,45 +547,163 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fd426d", en
   display: inline;
 }
 
-
-.curve {
+.about {
+  position: relative;
+  width: 100%;
+  height: 1050px;
   margin-top: 200px;
-  z-index: 100;
+}
+
+
+  .curve-wrapper {
+    position: relative;
+
+    height: max-content;
+    width: 100%;
+    padding: 0;
+    min-width: 1500px;
+  }
+
+
+
+
+.precurve, .aftercurve {
+ filter: blur(20px);
+}
+.curve, .curve2 {
+  position: absolute;
+  top: 8px;
+  height: max-content;
+  width: 100%;
+  z-index: 10;
+}
+
+#curve-wrapper2 {
+  position: absolute;
+  top: 350px;
+  transform: rotate(180deg);
+  z-index: -1;
+}
+
+/*
+.precurve {
+  position: relative;
+  margin-top: 200px;
+  filter: blur(20px);
+  z-index: -20;
+  
+}*/
+.precurve path, .aftercurve path {
+  fill: url("#SvgGradient");
+  
+}
+/*
+.aftercurve {
+  position: relative;
+  margin-top: -330px;
+  margin-bottom: -410px;
+  transform: rotate(180deg);
+  filter: blur(20px);
+  z-index: -20;
+}
+.curve {
+  position: relative;
+  margin-top: -335px;
 }
 
 .curve2 {
+  position: relative;
+  margin-top: 180px;
   transform: rotate(180deg);
-}
+}*/
+
 .about-cont {
+  display: inline;
   position: absolute;
-  top: 770px;
-  height: 200px;
+  top: 335px;
+  height: 390px;
   width: 100%;
-  background-color: #1a1d26;
+  background-color: #181A21;
 }
 
+.prequote {
+  display: none;
+  position: relative;
+  height: 80px;
+  width: 5px;
+  background-color: gray;
+  border-radius: 50px;
+  margin: 50px 0 0 55px;
+}
+.quote-author, .quote {
+  font-family: "poppins";
+  font-size: 15px;
+  font-weight: 200;
+  opacity: 0.4;
+}
+.quote-author {
+  display: inline-block;
+  width: 300px;
+  margin: 10px 0 0 70px;
+  color: white;
+  text-align: right;
+}
+.quote {
+  margin: 60px 0 0 60px;
+  color: white;
+}
+.quote::before {
+  content: "";
+  height: calc(1em + 40px);
+  width: 3px;
+  position: absolute;
+  margin-left: -10px;
+  background-color: gray;
+  border-radius: 50px;
+  z-index: 200;
+}
+.line {
+  height: 3px;
+  width: 50px;
+  background-color: #ff7547;
+  margin: -8px 0 0 80px;
+  border-radius: 50px;
+  filter: blur(0.4px);
+}
 .or-title {
   font-family: "poppins";
-  font-size: calc(1.275rem + 0.3vw);
+  font-size: 12px;
   letter-spacing: 2px;
   color: #ff7547;
   font-weight: 700;
   line-height: 1.2;
   margin: 10px 0 10px 50px;
 }
+
+.wh-subtitle {
+  color: white;
+  font-family: "poppins", sans-serif;
+  font-size: 20px;
+  margin: -15px 0 0 50px;
+}
 .wh-content {
   font-family: "poppins", sans-serif;
-  font-size: 18px;
+  font-size: 15px;
   margin: 0 0 0 50px; 
   color: white;
 }
 
-.about {
+
+.aboutContent {
+  position: relative;
+  margin-top: 10px;
   color: white;
-  width: 70%;
+  width: 60%;
+  z-index: 100;
 }
 
 .projects {
+  display: none;
   margin: 500px 0 100px 0;
 }
 
@@ -589,7 +853,7 @@ z-index: 20;
  display: none;
   position: absolute;
   top: 30px;
-  left: 22px;
+  right: 10px;
   height: 10px;
   width: 10px;
   border-radius: 50%;
@@ -613,6 +877,19 @@ z-index: 20;
 }
 /*-------------------------------*/
 
+@keyframes scrollbar {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
 @keyframes rotation {
    20% { transform: rotate(15deg); } 
    40% { transform: rotate(-10deg); } 
