@@ -161,6 +161,17 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fd426d", en
   color: gray;
 }
 
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
 @media only screen and (max-width: 1200px) {
 
   #indicator-about {
@@ -438,7 +449,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FD426D", en
   -webkit-text-fill-color: transparent;
 }
 
-#json {
+.json {
   position: absolute;
   top: 900px;
   right: 100px;
