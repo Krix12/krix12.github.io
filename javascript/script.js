@@ -1,3 +1,22 @@
+const menu = document.getElementsByClassName("contextmenu")[0];
+
+window.addEventListener(
+  'contextmenu',
+  function (e) {
+      e.preventDefault();
+         let x = e.clientX;
+         let y = e.clientY;
+         menu.style.top = (y + "px");
+         menu.style.left = (x + "px");
+         menu.style.display = "block"
+
+      
+  },
+  false,
+);
+window.addEventListener("click", function(e) {
+menu.style.display = "none";
+});
 
 let progress = document.getElementById("scrollbar");
 let totalHeight = document.body.scrollHeight - window.innerHeight;
@@ -31,13 +50,9 @@ await fetch('https://corsanywhere.herokuapp.com/https://krixportfoliodiscordstat
   
 }
 
-function emoji(item) {
-  const content = item.innerHTML.split(" ")
- item.innerHTML = "✅ " + content[1];
- item.addEventListener("mouseout", function() {
-  item.innerHTML = content.join(" ");
- })
- return
+function showgradient(item) {
+
+  
 }
 function openURL(url, id) {
 window.open(url, "_blank").focus();

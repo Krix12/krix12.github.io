@@ -32,6 +32,58 @@ body {
   padding: 0;
   visibility: visible !important;
 }
+
+.contextmenu {
+  display: none;
+  position: absolute;
+  top: 300px;
+  left: 50%;
+
+  height: 300px;
+  width: 200px;
+  background-color: #111319;
+  border: 8px solid transparent;
+  border-radius: 30px;
+  background-image: linear-gradient(#111319, #111319), 
+                    linear-gradient(360deg, hsla(346, 98%, 63%, 1) 0%, hsla(26, 93%, 59%, 1) 100%);;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+.contextmenu::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 300px;
+  width: 200px;
+  border-radius: 5px;
+  background: hsla(346, 98%, 63%, 1);
+
+background: linear-gradient(90deg, hsla(346, 98%, 63%, 1) 0%, hsla(26, 93%, 59%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(346, 98%, 63%, 1) 0%, hsla(26, 93%, 59%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(346, 98%, 63%, 1) 0%, hsla(26, 93%, 59%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fd426d", endColorstr="#f88a33", GradientType=1 );
+  filter: blur(20px);
+  
+  z-index: -1;
+}
+
+.contextmenu-grid {
+  display: grid;
+  color: white;
+  font-family: "poppins", sans-serif;
+  height: 300px;
+  width: 200px;
+}
+
+.contextmenu-item {
+  padding-top: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
 ::-webkit-scrollbar {
   width: 0;
 }
@@ -158,16 +210,26 @@ body {
   border-radius: 50px;
 }
 .navbar-h {
-  display: none;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: block;
+  margin: 0 auto 0 auto;
+  width: max-content;
   text-align: right;
   color: white;
   font-family: "Poppins",sans-serif;
+  font-weight: 700;
   letter-spacing: 0.5px;
-  
+  /*
+  background: linear-gradient(to right, hsla(346, 98%, 63%, 1) 0%, hsla(26, 93%, 59%, 1) 100%);
+
+background: -moz-linear-gradient(to right, hsla(346, 98%, 63%, 1) 0%, hsla(26, 93%, 59%, 1) 100%);
+
+background: -webkit-linear-gradient(to right, hsla(346, 98%, 63%, 1) 0%, hsla(26, 93%, 59%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FD426D", endColorstr="#F88A33", GradientType=1 );
+
+-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  */
 }
 
 .navbar-h > ul{
@@ -184,7 +246,7 @@ body {
 .navbar-h li {
   display: inline;
   margin-right: 20px !important;
-
+  
 }
 
 .navbar {
