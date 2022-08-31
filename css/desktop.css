@@ -45,11 +45,12 @@ body {
   border: 8px solid transparent;
   border-radius: 30px;
   background-image: linear-gradient(#111319, #111319), 
-                    linear-gradient(360deg, hsla(346, 98%, 63%, 1) 0%, hsla(26, 93%, 59%, 1) 100%);;
+                    linear-gradient(360deg, #fd446f 0%, #f88935 100%);;
   background-origin: border-box;
   background-clip: content-box, border-box;
+  z-index: 300;
 }
-.contextmenu::before {
+/*.contextmenu::before {
   content: "";
   position: absolute;
   display: block;
@@ -68,7 +69,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fd426d", en
   filter: blur(20px);
   
   z-index: -1;
-}
+}*/
 
 .contextmenu-grid {
   display: grid;
@@ -293,9 +294,6 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FD426D", en
 #menu {
   color: #595959;
   font-size: 20px;
-  &:hover {
-    cursor: pointer
-  }
 }
 
 
@@ -345,9 +343,6 @@ background-clip: text;
   font-family: "Roboto";
   font-size: 20px;
   font-weight: 700;
-  &:hover, &:visited, &:link, &:action {
-    text-decoration: none;
-  }
 }
 .spotify {
   display: none;
@@ -400,6 +395,7 @@ background: -moz-linear-gradient(90deg, hsla(346, 98%, 63%, 1) 0%, hsla(26, 93%,
 background: -webkit-linear-gradient(90deg, hsla(346, 98%, 63%, 1) 0%, hsla(26, 93%, 59%, 1) 100%);
 
 filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FD426D", endColorstr="#F88A33", GradientType=1 );
+background-clip: text;
 -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -445,6 +441,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FD426D", en
   font-family: "Roboto";
   font-weight: 700;
   animation: rotation 10s infinite;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -559,6 +556,7 @@ background: -moz-linear-gradient(45deg, hsla(346, 98%, 63%, 1) 0%, hsla(26, 93%,
 background: -webkit-linear-gradient(45deg, hsla(346, 98%, 63%, 1) 0%, hsla(26, 93%, 59%, 1) 100%);
 
 filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fd426d", endColorstr="#f88a33", GradientType=1 );
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 30px;
@@ -776,8 +774,68 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fd426d", en
 }
 
 .projects {
+  margin: 0 0 100px 0;
+}
+
+.projects-content {
+  display: block;
+  margin: 100px auto 0 auto;
+  height: 300px;
+  width: 800px;
+}
+
+.projects-item {
+  position: relative;
+  height: 300px;
+  width: 400px;
+  background-color: #181A21;
+  border-radius: 20px;
+
+}
+
+.projects-img {
+  height: 100px;
+  width: 100px;
+  border-radius: 20px;
+}
+
+.projects-title {
+  position: absolute;
+  top: 10px;
+  left: 120px;
+  color: white;
+  font-family: "roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  z-index: 10;
+}
+
+.projects-date {
+  position: absolute;
+  top: 35px;
+  left: 120px;
+  font-family: "roboto", sans-serif;
+  font-size: 14px;
+  color: #A1A1A1;
+}
+
+.projects-description {
+  color: white;
+  font-family: "roboto", sans-serif;
+  margin-left: 17px;
+  margin-top: 10px;
+}
+
+.projects-button {
   display: none;
-  margin: 500px 0 100px 0;
+  margin: 120px auto 0 auto;
+  height: 36px;
+  width: 300px;
+  font-family: "roboto", sans-serif;
+  font-size: 14px;
+  color: #111319;
+  background: linear-gradient(90deg, hsla(346, 98%, 63%, 1) 0%, hsla(26, 93%, 59%, 1) 100%);
+  border-radius: 50px;
 }
 
 .projects-filter {
@@ -979,7 +1037,8 @@ z-index: 20;
   border: 4px solid transparent;
     }
     to {
-      linear-gradient(45deg, hsla(346, 98%, 63%, 1) 0%, hsla(26, 93%, 59%, 1) 100%)
+      background:
+      linear-gradient(45deg, hsla(346, 98%, 63%, 1) 0%, hsla(26, 93%, 59%, 1) 100%);
       background-size: 300% 100%;
 background-position:left bottom;
     }
