@@ -18,6 +18,12 @@ window.addEventListener("click", function(e) {
 menu.style.display = "none";
 });*/
 
+document.getElementById("contact-file").addEventListener("change", () => {
+
+  document.getElementById("upload-text").innerHTML = document.getElementById("contact-file").files[0].name
+  document.getElementById("upload-text").style.margin = 0;
+})
+
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
 
@@ -149,6 +155,43 @@ axios(config)
     .catch(function (error) {
     document.getElementById("error").style.display = "inherit";
     });
+}
+}
+
+
+async function sendMessage() {
+  const email = document.getElementById("contact-email").value
+  const message = document.getElementById("contact-message").value
+  if(email &&  message) {
+    
+  const options = {
+    method: 'POST',
+    url: 'https://krixportfolioproxy.herokuapp.com/https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send',
+    headers: {
+      'content-type': 'application/json',
+      'X-RapidAPI-Key': 'cfad1ccf72msh9665e74ac552223p136089jsnc9817a84856d',
+      'X-RapidAPI-Host': 'rapidprod-sendgrid-v1.p.rapidapi.com'
+    },
+    data: JSON.stringify({
+        "personalizations":[{"to":[{"email":"krixdev12@gmail.com"}],
+        "subject":"New message from portfolio"}],
+        "from":{"email":"messages@krix.is-a.dev"},
+        "content":[{"type":"text/plain","value":`Email: ${email}\nMessage: ${message}`}]
+    })
+
+
+
+  };
+  
+  axios.request(options).then(function (response) {
+      alert("Message successfully sent");
+      document.getElementById("contact-email").value = null
+      document.getElementById("contact-message").value = null
+  }).catch(function (error) {
+      console.log(error);
+  });
+} else {
+  alert("Please fill out all fields")
 }
 }
 

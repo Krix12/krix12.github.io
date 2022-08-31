@@ -288,16 +288,37 @@
         <button type="button" class="filter-btn">Other</button>
        </div>
        <div class="projects-content">
-        <div class="projects-item">
+        <div class="projects-item" style="margin-right: 20px;">
           <img src="Assets/Images/kermix.png" class="projects-img">
           <div class="projects-title">Kermix</div>
           <div class="projects-date">01/07/2022</div>
-          <div class="projects-description">In progress</div>
+          <div class="projects-description">An advanced discord bot with over 200 commands planned.</div>
+          <button class="projects-button">Website</button>
+        </div>
+        <div class="projects-item">
+          <img src="Assets/Images/kitsu_logo.png" class="projects-img">
+          <div class="projects-title">Kitsu</div>
+          <div class="projects-date">01/07/2022</div>
+          <div class="projects-description">A new android app for <a class="link" href="https://kitsu.io">Kitsu</a>. I'm doing this myself when I have the time, so it's not an official team developing it.</div>
           <button class="projects-button">Website</button>
         </div>
        </div>
     </div>
- 
+    <div class="or-title">CONTACT<div class="line"></div></div>
+    <div class="wh-subtitle"><h4>Get in touch with me</h4></div>
+    <section class="contact">
+
+      <input type="text" id="contact-email" placeholder="E-mail">
+      <div class="break"></div>
+      <textarea id="contact-message" placeholder="Message"></textarea>
+      <div class="break"></div>
+      <label for="contact-file" class="custom-file-upload">
+        <span id="upload-text">Upload a file</span>
+      <input type="file" id="contact-file">
+    </label>
+    <div class="break"></div>
+    <button class="contact-submit" onclick="sendMessage();">SUBMIT</button>
+    </section>
   <div class="posts">
     <div style="display: flex;">
       <div id="posts-num">

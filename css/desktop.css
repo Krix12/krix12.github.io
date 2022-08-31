@@ -688,6 +688,12 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fd426d", en
   transform: rotate(180deg);
 }*/
 
+.link {
+  text-decoration: none;
+  color: #0060df;
+  font-family: "roboto", sans-serif;
+}
+
 .about-cont {
   display: inline;
   position: absolute;
@@ -775,13 +781,14 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fd426d", en
 
 .projects {
   margin: 0 0 100px 0;
+
 }
 
 .projects-content {
-  display: block;
+  display: flex;
   margin: 100px auto 0 auto;
-  height: 300px;
-  width: 800px;
+  height: max-content;
+  width: max-content;
 }
 
 .projects-item {
@@ -910,6 +917,95 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fd426d", en
 .filter-btn:focus::after {
   opacity: 1;
 }
+
+.break {
+  height: 0;
+  flex-basis: 100%;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0px;
+  height: 600px;
+  width: 500px;
+  margin: 0 auto 0 auto;
+  padding: 10px;
+  background-color: #181a21;
+  border-radius: 24px;
+}
+
+
+#contact-email {
+  width: auto;
+  height: 82px;
+  flex: 1 1 0px;
+  flex-wrap: wrap-reverse;
+  background-color: #242835;
+  border-radius: 18px;
+  padding-left: 20px;
+  color: white;
+  font-family: "roboto", sans-serif;
+  font-size: 18px;
+  outline: none;
+  border: none;
+}
+
+#contact-message {
+  height: 350px;
+  width: auto;
+  flex: 1 1 0px;
+  background-color: #242835;
+  border-radius: 18px;
+  color: white;
+  font-family: "roboto", sans-serif;
+  font-size: 18px;
+  padding: 10px;
+  padding-left: 20px;
+  outline: none;
+  border: none;
+  resize: none;
+}
+
+.custom-file-upload {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: auto;
+  cursor: pointer;
+  background-color: #242835;
+  flex: 1 1 0px;
+  border-radius: 18px;
+}
+
+#upload-text {
+  color: #757575;
+  font-family: "roboto", sans-serif;
+  white-space: nowrap;
+  margin-left: 200px;
+}
+
+#contact-file {
+  visibility: hidden;
+  height: min-content;
+
+}
+
+.contact-submit {
+  display: block;
+  height: 50px;
+  width: 280px;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  font-family: "roboto", sans-serif;
+  margin: 0 auto 0 auto;
+  background: linear-gradient(90deg, hsla(346, 98%, 63%, 1) 0%, hsla(26, 93%, 59%, 1) 100%);
+  cursor: pointer;
+}
+
 .posts {
   display: none;
 }
