@@ -7,11 +7,7 @@
  src: url("Wotfard-Regular.woff2");
  font-display: swap;
 }
-/*
-$spotOne: #060411;
-$spotTwo: #ec008c;
-$spotThree: #ff0000;
-*/
+
 
 body {
   background-color: #141622;
@@ -20,6 +16,9 @@ body {
   visibility: visible !important;
 }
 
+.indicator, .curve-wrapper, .contextmenu, .pretitle {
+  display: none;
+}
 
 .navbar-h {
   display: none;
@@ -61,9 +60,6 @@ body {
 #menu {
   color: #595959;
   font-size: 20px;
-  &:hover {
-    cursor: pointer
-  }
 }
 
 
@@ -105,17 +101,17 @@ background-clip: text;
 #projects, #donate {
   margin-right: 12.9px !important;
 }
+
+
 .menu-content {
   color: white;
   font-family: "Roboto";
   font-size: 20px;
   font-weight: 700;
-  &:hover, &:visited, &:link, &:action {
-    text-decoration: none;
-  }
 }
 
 .spotify {
+  display: none;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -144,7 +140,216 @@ background-clip: text;
     
   }
 
+  .prequote {
+    display: none;
+    position: relative;
+    height: 80px;
+    width: 5px;
+    background-color: gray;
+    border-radius: 50px;
+    margin: 50px 0 0 55px;
+  }
+  .quote-author, .quote {
+    font-family: "poppins";
+    font-size: 15px;
+    font-weight: 200;
+    opacity: 0.4;
+  }
+  .quote-author {
+    display: inline-block;
+    width: 300px;
+    margin: 10px 0 0 30px;
+    color: white;
+    text-align: right;
+  }
+  .quote {
+    margin: 40px 0 0 20px;
+    color: white;
+  }
+  .quote::before {
+    content: "";
+    height: calc(1em + 40px);
+    width: 3px;
+    position: absolute;
+    margin-left: -10px;
+    background-color: gray;
+    border-radius: 50px;
+    z-index: 200;
+  }
 
+  .line {
+    height: 3px;
+    width: 50px;
+    background-color: #ff7547;
+    margin: -8px 0 0 80px;
+    border-radius: 50px;
+    filter: blur(0.4px);
+  }
+
+  .or-title {
+    font-family: "poppins";
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #ff7547;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 10px 0 10px 10px;
+  }
+
+  
+.wh-subtitle {
+  color: white;
+  font-family: "poppins", sans-serif;
+  font-size: 20px;
+  margin: -15px 0 0 10px;
+}
+
+.wh-content {
+  font-family: "poppins", sans-serif;
+  font-size: 15px;
+  margin: 0 0 0 10px; 
+  color: white;
+}
+
+
+.projects {
+  margin: 30px 0 100px 0;
+}
+
+.projects-content {
+  display: block;
+  margin: 100px auto 0 auto;
+  height: 300px;
+  width: 800px;
+}
+
+.projects-item {
+  position: relative;
+  height: 300px;
+  width: 400px;
+  background-color: #181A21;
+  border-radius: 20px;
+
+}
+
+.projects-img {
+  height: 100px;
+  width: 100px;
+  border-radius: 20px;
+}
+
+.projects-title {
+  position: absolute;
+  top: 10px;
+  left: 120px;
+  color: white;
+  font-family: "roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  z-index: 10;
+}
+
+.projects-date {
+  position: absolute;
+  top: 35px;
+  left: 120px;
+  font-family: "roboto", sans-serif;
+  font-size: 14px;
+  color: #A1A1A1;
+}
+
+.projects-description {
+  color: white;
+  font-family: "roboto", sans-serif;
+  margin-left: 17px;
+  margin-top: 10px;
+}
+
+.projects-button {
+  display: none;
+  margin: 120px auto 0 auto;
+  height: 36px;
+  width: 300px;
+  font-family: "roboto", sans-serif;
+  font-size: 14px;
+  color: #111319;
+  background: linear-gradient(90deg, hsla(346, 98%, 63%, 1) 0%, hsla(26, 93%, 59%, 1) 100%);
+  border-radius: 50px;
+}
+
+.projects-filter {
+  display: flex;
+  width: 100%;
+  margin: 10px 5px 0 5px;
+  color: white;
+  
+}
+
+.filter-btn {
+  height: 30px;
+  width: fit-content;
+  flex: 1 1 0px;
+  background-color: #ff7547;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: "poppins", sans-serif; 
+  margin-left: 10px;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em white;
+    box-shadow: inset 0 0 0.5em 0 #ff7547, 0 0 0.5em 0 #ff7547;
+    position: relative;
+    cursor: pointer;
+}
+
+.filter-btn::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  background: #ff7547;
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(1em);
+  opacity: 0.7;
+}
+
+.filter-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em #ff7547;
+  opacity: 0;
+  background-color: #ff7547;
+  z-index: -1;
+  transition: opacity 100ms linear;
+  border: 2px solid #ff7547;
+  border-radius: 5px;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  border-radius: 5px;
+  color: white;
+  text-shadow: none;
+  background-color: #B1553B;
+  border: 2px solid #ff7547;
+}
+
+.filter-btn:hover::before,
+.filter-btn:focus::before {
+  opacity: 1;
+  top: 130%;
+}
+.filter-btn:hover::after,
+.filter-btn:focus::after {
+  opacity: 1;
+}
 
 .hometext {
   display: block;
@@ -176,6 +381,7 @@ background: -moz-linear-gradient(90deg, hsla(346, 98%, 63%, 1) 0%, hsla(26, 93%,
 background: -webkit-linear-gradient(90deg, hsla(346, 98%, 63%, 1) 0%, hsla(26, 93%, 59%, 1) 100%);
 
 filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FD426D", endColorstr="#F88A33", GradientType=1 );
+background-clip: text;
 -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -219,11 +425,12 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FD426D", en
   font-family: "Roboto";
   font-weight: 700;
   animation: rotation 10s infinite;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-#json {
+.json {
   display: none;
   position: relative;
   height: 400px;
@@ -235,7 +442,8 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FD426D", en
   border-radius: 5px;
 }
 
-#json::before {
+.json::before {
+  display: none;
   content: "";
   position: absolute;
   height: 400px;
@@ -324,6 +532,7 @@ background: -moz-linear-gradient(45deg, hsla(346, 98%, 63%, 1) 0%, hsla(26, 93%,
 background: -webkit-linear-gradient(45deg, hsla(346, 98%, 63%, 1) 0%, hsla(26, 93%, 59%, 1) 100%);
 
 filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fd426d", endColorstr="#f88a33", GradientType=1 );
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 30px;
@@ -388,6 +597,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fd426d", en
   display: none;
 }
 .posts {
+  display: none;
   position: absolute;
   top: 670px;
   height: 190px;
@@ -497,7 +707,8 @@ z-index: 20;
   border: 4px solid transparent;
     }
     to {
-      linear-gradient(45deg, hsla(346, 98%, 63%, 1) 0%, hsla(26, 93%, 59%, 1) 100%)
+      background:
+      linear-gradient(45deg, hsla(346, 98%, 63%, 1) 0%, hsla(26, 93%, 59%, 1) 100%);
       background-size: 300% 100%;
 background-position:left bottom;
     }

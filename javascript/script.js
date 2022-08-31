@@ -1,6 +1,6 @@
 const menu = document.getElementsByClassName("contextmenu")[0];
 
-window.addEventListener(
+/*window.addEventListener(
   'contextmenu',
   function (e) {
       e.preventDefault();
@@ -16,7 +16,7 @@ window.addEventListener(
 );
 window.addEventListener("click", function(e) {
 menu.style.display = "none";
-});
+});*/
 
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");

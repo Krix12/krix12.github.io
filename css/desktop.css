@@ -549,7 +549,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fd426d", en
 }
 
 #moretext  { 
-  background: linear-gradient(45deg, hsla(346, 98%, 63%, 1) 0%, hsla(26, 93%, 59%, 1) 100%);
+  background: linear-gradient(45deg, #fc4570 0%, #f88935 100%);
 
 background: -moz-linear-gradient(45deg, hsla(346, 98%, 63%, 1) 0%, hsla(26, 93%, 59%, 1) 100%);
 
