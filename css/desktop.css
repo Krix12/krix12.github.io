@@ -1094,7 +1094,7 @@ footer {
 }
 
 #footer-gradient rect {
-  fill: url("#SvgGradient");
+  fill: url("#SvgGradient2");
   filter: blur(20px)
 }
 
