@@ -24,9 +24,9 @@
   font-weight: normal;
   font-style: normal;
 }
+
+
 body {
-  /*#111319*/
-  /*#141622*/
   background-color: #111319;
   margin: 0;
   padding: 0;
@@ -447,6 +447,7 @@ background-clip: text;
 }
 
 .json {
+  display: none;
   position: absolute;
   top: 900px;
   right: 100px;
@@ -1073,6 +1074,54 @@ z-index: 20;
   margin-top: -30px;
   margin-left: 7px;
   
+}
+
+
+footer {
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background-color: #181a21;
+  margin-top: 100px;
+  align-items: center;
+}
+
+
+#footer-gradient {
+  margin-top: -90px;
+  margin-left: -100px;
+  z-index: -1;
+}
+
+#footer-gradient rect {
+  fill: url("#SvgGradient");
+  filter: blur(20px)
+}
+
+
+footer p {
+  color: white;
+  font-family: "roboto", sans-serif;
+  margin-left: 10px;
+}
+
+footer div {
+  flex: 0 1 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#footer-discord, #footer-github, #footer-paypal, #footer-youtube, #footer-spotify {
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  margin-right: 15px;
+  transition: font-size 50ms;
+}
+
+#footer-discord:hover, #footer-github:hover, #footer-paypal:hover, #footer-youtube:hover, #footer-spotify:hover {
+font-size: 28px;
 }
 
 /* STATES ---------------------*/
