@@ -50,6 +50,8 @@ body {
   background-clip: content-box, border-box;
   z-index: 300;
 }
+
+
 /*.contextmenu::before {
   content: "";
   position: absolute;
@@ -1122,6 +1124,29 @@ footer div {
 
 #footer-discord:hover, #footer-github:hover, #footer-paypal:hover, #footer-youtube:hover, #footer-spotify:hover {
 font-size: 28px;
+}
+
+.languages {
+  display: flex;
+  flex-direction: row;
+  column-gap: 60px;
+  justify-content: center;
+  height: 100px;
+  width: 400px;
+  padding-left: 10px;
+  background-color: #181a21;
+  float: right;
+  margin-top: 200px;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+}
+
+.languages img {
+  display: block;
+  height: 50px;
+  width: auto;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 /* STATES ---------------------*/

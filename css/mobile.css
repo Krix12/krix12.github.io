@@ -16,6 +16,9 @@ body {
   visibility: visible !important;
 }
 
+.languages {
+  display: none;
+}
 .indicator, .curve-wrapper, .contextmenu, .pretitle {
   display: none;
 }
