@@ -178,7 +178,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fd426d", en
 @media only screen and (max-width: 1200px) {
 
   #indicator-about {
-    margin: 100px 0 0 30%;
+    margin: 100px -500px 0 600px;
   }
   .aboutContent {
     color: white;
@@ -760,6 +760,14 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fd426d", en
   margin: 10px 0 10px 50px;
 }
 
+.preferences-sign {
+  font-family: "poppins";
+  font-size: 16px;
+  font-weight: 700;
+  color: #ff7547;
+  margin: 0 5px -10px 5px;
+}
+
 .wh-subtitle {
   color: white;
   font-family: "poppins", sans-serif;
@@ -773,6 +781,27 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fd426d", en
   color: white;
 }
 
+#bracket {
+  fill: url("#SvgGradient")
+}
+
+#choices-btn {
+  display: flex;
+  height: 30px;
+  width: 150px;
+  position: relative;
+  opacity: 1;
+   background: 
+    linear-gradient(#181A21, #181A21) padding-box,
+    linear-gradient(45deg, hsla(346, 98%, 63%, 1) 0%, hsla(26, 93%, 59%, 1) 100%) border-box;
+  border: 4px solid transparent;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+ /* animation: opacity2 3s infinite;*/
+  z-index: 1;
+  
+}
 
 .aboutContent {
   position: relative;
@@ -1108,7 +1137,10 @@ footer p {
 }
 
 footer div {
-  flex: 0 1 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 28px);
+  column-gap: 10px;
+  height: 28px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -1118,7 +1150,7 @@ footer div {
   color: white;
   font-size: 25px;
   cursor: pointer;
-  margin-right: 15px;
+  text-align: center;
   transition: font-size 50ms;
 }
 
