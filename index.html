@@ -322,14 +322,14 @@
         <button type="button" class="filter-btn">Other</button>
        </div>
        <div class="projects-content">
-        <div class="projects-item" style="margin-right: 20px;">
+        <div class="projects-item" style="margin-right: 20px;" onmouseover="projectsAnimation(this);" onmouseleave="projectsAnimationEnd(this);" data-tilt data-tilt-max="30" data-tilt-speed="400" data-tilt-perspective="1000">
           <img src="Assets/Images/kermix.png" class="projects-img">
           <div class="projects-title">Kermix</div>
           <div class="projects-date">01/07/2022</div>
           <div class="projects-description">An advanced discord bot with over 200 commands planned.</div>
           <button class="projects-button">Website</button>
         </div>
-        <div class="projects-item">
+        <div class="projects-item" onmouseover="projectsAnimation(this);" onmouseleave="projectsAnimationEnd(this);" data-tilt data-tilt-max="30" data-tilt-speed="400" data-tilt-perspective="1000">
           <img src="Assets/Images/kitsu_logo.png" class="projects-img">
           <div class="projects-title">Kitsu</div>
           <div class="projects-date">01/07/2022</div>
@@ -378,6 +378,7 @@
     </style>
   </noscript>
  <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "180a2ab0448c44688dc129aa475368cf"}'></script><!-- End Cloudflare Web Analytics -->
+ <script type="text/javascript" src="vanilla-tilt.js"></script>
 </body>
 <footer>
   <p>© Krix, 2022</p>

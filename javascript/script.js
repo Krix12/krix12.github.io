@@ -24,6 +24,26 @@ document.getElementById("contact-file").addEventListener("change", () => {
   document.getElementById("upload-text").style.margin = 0;
 })
 
+
+function projectsAnimation(element) {
+  const image =  element.getElementsByClassName("projects-img")[0]
+  image.style.margin = "-10px 0 0 -10px"
+ /* image.style.boxShadow = "inset 0 0 12px 12px white, inset 0 0 3px 2px white"
+  image.style.background = "linear-gradient(45deg, #fc4570 0%, #f88935 100%);"
+  image.style.padding = "18px"*/
+  //element.style.border = "20px solid #181A21"
+}
+
+function projectsAnimationEnd(element) {
+  const image =  element.getElementsByClassName("projects-img")[0]
+  image.style.margin = "0"
+  /*image.style.boxShadow = "none"
+  image.style.background = "none"
+  image.style.padding = "0"*/
+  //element.style.border = "0"
+}
+
+
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
 
