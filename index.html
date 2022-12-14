@@ -26,6 +26,11 @@
 </head>
 
 <body style="visibility:hidden;">
+  <div class="spotify">
+  <img src="Assets/Images/spotify.webp" alt="spotify" id="spotify-logo"></img>
+  <div id="artist" style="display: none;">Pewdiepie:</div>
+  <div id="songname" style="display: none;">Test lasagna</div>
+</div>
   <div class="contextmenu">
    <div class="contextmenu-grid">
     <div class="contextmenu-item">Home</div>
@@ -50,11 +55,7 @@
   </div>
   
   <div class="indicator"><h1>/HOME</h1></div>
-<div class="spotify">
-  <img src="Spotify.png" alt="spotify" id="spotify-logo"></img>
-  <div id="artist">Pewdiepie:</div>
-  <div id="songname">Test lasagna</div>
-</div>
+
   <iframe src="/content/news.html" id="popup"></iframe>
   <div class="navbar-h">
 
@@ -265,7 +266,7 @@
     <div class="aboutContent reveal">
         <div class="or-title">ABOUT ME<div class="line"></div></div>
         <div class="wh-subtitle"><h4>GET TO KNOW ME</h4></div>
-        <div class="wh-content">I'm  a web and android developer. In my free time, I like to do 3d art and graphic design, watch anime, and read books(<i>I know some of y'all almost died from cringe reading this, but I don't care lol</i></i>).
+        <div class="wh-content">I'm  a web and android developer. In my free time, I like to do 3d art and graphic design, watch anime, and read books.
         <br><br><br>
         JavaScript <span class="preferences-sign">></span> Python<br>
         Desktop <span class="preferences-sign">></span> Laptop<br>
@@ -284,7 +285,7 @@
         </svg>-->
       
     </div>
-    
+  
     <div class="prequote"></div>
     <div class="quote"><i>Being myself is what got me to where I am.</i></div>
     <div class="quote-author"><i>- Jeff Hardy</i></div>
@@ -368,6 +369,7 @@
     </div>
 
   </div>
+ 
   <script src="javascript/script.js"></script>
   <script src="https://unpkg.com/slide-element@2.2.6/dist/index.umd.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" defer></script>
@@ -397,7 +399,7 @@
   <defs>
     <linearGradient id="SvgGradient2">
     <stop offset="0%" stop-color="hsla(346, 98%, 63%, 1)"></stop>
-    <stop offset="100%" stop-color="hsla(26, 93%, 59%, 1)"></stop>
+    <stop offset="50%" stop-color="hsla(26, 93%, 59%, 1)"></stop>
     </linearGradient>
    </defs>
 </svg>

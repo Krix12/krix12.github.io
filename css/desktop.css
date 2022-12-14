@@ -347,20 +347,23 @@ background-clip: text;
   font-weight: 700;
 }
 .spotify {
-  display: none;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 40px;
+  display: flex;
+  position: sticky;
+  top: 90%;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  background-color: #242835;
   line-height: 20px;
-  width: 100%;
+  width: 50px;
+  margin-left: 10px;
+  border-radius: 10px;
+  z-index: 20;
 }
 
 #spotify-logo {
- height: 25px;
- width: 25px;
-
- margin-left: 7px;
+ height: 40px;
+ width: 40px;
 }
 
 .hometext {
