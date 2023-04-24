@@ -25,6 +25,8 @@ document.getElementById("contact-file").addEventListener("change", () => {
 })
 
 
+
+
 function projectsAnimation(element) {
   const image =  element.getElementsByClassName("projects-img")[0]
   image.style.margin = "-10px 0 0 -10px"
@@ -43,7 +45,7 @@ function projectsAnimationEnd(element) {
   //element.style.border = "0"
 }
 
-
+/* THE CODE BELOW IS FROM https://alvarotrigo.com/blog/css-animations-scroll/ ↓↓ */
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
 
@@ -61,6 +63,7 @@ function reveal() {
 }
 
 window.addEventListener("scroll", reveal);
+/* ↑↑↑↑ */
 
 let progress = document.getElementById("scrollbar");
 let totalHeight = document.body.scrollHeight - window.innerHeight;
@@ -90,6 +93,7 @@ await fetch('https://corsanywhere.herokuapp.com/https://krixportfoliodiscordstat
 
     .catch(err => {
     document.getElementById("offline").style.display = "inherit"
+    console.log(err)
     });
   
 }
@@ -186,14 +190,14 @@ async function sendMessage() {
     
   const options = {
     method: 'POST',
-    url: 'https://krixportfolioproxy.herokuapp.com/https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send',
+    url: 'https://corsanywhere.herokuapp.com/https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send',
     headers: {
       'content-type': 'application/json',
       'X-RapidAPI-Key': 'cfad1ccf72msh9665e74ac552223p136089jsnc9817a84856d',
       'X-RapidAPI-Host': 'rapidprod-sendgrid-v1.p.rapidapi.com'
     },
     data: JSON.stringify({
-        "personalizations":[{"to":[{"email":"krixdev12@gmail.com"}],
+        "personalizations":[{"to":[{"email":"kristjan.kocevar89@gmail.com"}],
         "subject":"New message from portfolio"}],
         "from":{"email":"messages@krix.is-a.dev"},
         "content":[{"type":"text/plain","value":`Email: ${email}\nMessage: ${message}`}]

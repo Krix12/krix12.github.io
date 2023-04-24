@@ -30,7 +30,22 @@ body {
   background-color: #111319;
   margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
+  min-width: fit-content;
   visibility: visible !important;
+}
+
+html {
+  min-width: fit-content;
+}
+
+
+
+html, body{ 
+  width:100vw;
+  padding: 0;
+  margin: 0;
 }
 
 .contextmenu {
@@ -163,7 +178,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fd426d", en
 .inactive {
   color: gray;
 }
-
+/* THE CODE BELOW IS FROM https://alvarotrigo.com/blog/css-animations-scroll/ ↓↓ */
 .reveal{
   position: relative;
   transform: translateY(150px);
@@ -174,7 +189,8 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fd426d", en
 .reveal.active{
   transform: translateY(0);
   opacity: 1;
-}
+  
+}/* ↑↑↑↑ */
 @media only screen and (max-width: 1200px) {
 
   #indicator-about {
@@ -264,12 +280,16 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FD426D", en
 }
 
 .navbar {
+
+  width: 100vw !important;
   visibility: hidden;
 }
 
 .logo-container {
+  width: 100vw;
   visibility: visible;
 }
+
 #logo {
   position: absolute;
   top: 5px;
